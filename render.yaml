@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: enox-reportcard
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s dist -l 3000
+    envVars:
+      - key: VITE_SUPABASE_PROJECT_ID
+        value: dfvurfhkoiobakxbmnvr
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRmdnVyZmhrb2lvYmFreGJtbnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyMDE0MjcsImV4cCI6MjA3ODc3NzQyN30.WSBmC1j2JLCwgSAyyf4ATrrXDltbdgpuQI8sniyr5n4
+      - key: VITE_SUPABASE_URL
+        value: https://dfvurfhkoiobakxbmnvr.supabase.co
